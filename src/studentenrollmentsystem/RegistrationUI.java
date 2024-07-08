@@ -1,8 +1,7 @@
 
 package studentenrollmentsystem;
 
-import msAccessConnection.UserDbAccess;
-import msAccessConnection.DatabaseConnection;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,13 +12,13 @@ import studentenrollmentsystem.StudentFrame;
 
 public class RegistrationUI extends javax.swing.JFrame {
 
-    private UserDbAccess userDAO;
+    
     private int mouseX, mouseY;
     
     public RegistrationUI() {
         initComponents();
         setLocationRelativeTo(null);
-        userDAO = new UserDbAccess(); 
+         
     }
 
     /**
@@ -336,17 +335,17 @@ public class RegistrationUI extends javax.swing.JFrame {
         return;
     }
 
-    boolean registered = userDAO.registerUser(lname, fname, mname, age, gender, formatDate(birthday), email, password);
+    
 
-   if (registered) {
-    StudentFrame sframe = new StudentFrame();
-    JOptionPane.showMessageDialog(null, "Registration successful!");
-    sframe.setVisible(true);
-    clearFields();
-    dispose();
-} else {
-    JOptionPane.showMessageDialog(null, "Registration failed!");
-}
+//   if (registered) {
+//    StudentFrame sframe = new StudentFrame();
+//    JOptionPane.showMessageDialog(null, "Registration successful!");
+//    sframe.setVisible(true);
+//    clearFields();
+//    dispose();
+//} else {
+//    JOptionPane.showMessageDialog(null, "Registration failed!");
+//}
 
     }//GEN-LAST:event_regButtonActionPerformed
     

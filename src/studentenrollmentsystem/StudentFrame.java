@@ -50,8 +50,6 @@ public class StudentFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        searchTextField = new javax.swing.JTextField();
-        searchButton = new javax.swing.JButton();
         myProfileButton = new javax.swing.JButton();
         notifButton = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -171,24 +169,6 @@ public class StudentFrame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Schadow BT", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 102, 153));
 
-        searchTextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
-        searchTextField.setOpaque(false);
-        searchTextField.setToolTipText("");
-        searchTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchTextFieldActionPerformed(evt);
-            }
-        });
-
-        searchButton.setText("🔍  Search");
-        searchButton.setBackground(new java.awt.Color(255, 255, 255));
-        searchButton.setForeground(new java.awt.Color(0, 51, 102));
-        searchButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchButtonActionPerformed(evt);
-            }
-        });
-
         myProfileButton.setText("👨  My Profile");
         myProfileButton.setBackground(new java.awt.Color(255, 255, 255));
         myProfileButton.setForeground(new java.awt.Color(0, 51, 153));
@@ -216,11 +196,7 @@ public class StudentFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(210, 210, 210)
-                .addComponent(searchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(174, 174, 174)
+                .addGap(851, 851, 851)
                 .addComponent(notifButton)
                 .addGap(18, 18, 18)
                 .addComponent(myProfileButton)
@@ -236,10 +212,7 @@ public class StudentFrame extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(searchTextField)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(myProfileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(myProfileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(notifButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -507,9 +480,9 @@ public class StudentFrame extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new java.awt.GridLayout(1, 8, 10, 0));
 
+        programmingJavaApplyBtn.setText("Apply");
         programmingJavaApplyBtn.setBackground(new java.awt.Color(255, 255, 255));
         programmingJavaApplyBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        programmingJavaApplyBtn.setText("Apply");
         programmingJavaApplyBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 programmingJavaApplyBtnMouseClicked(evt);
@@ -552,9 +525,9 @@ public class StudentFrame extends javax.swing.JFrame {
         });
         jPanel5.add(viewCourse2);
 
+        agriProductionApplyBtn.setText("Apply");
         agriProductionApplyBtn.setBackground(new java.awt.Color(255, 255, 255));
         agriProductionApplyBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        agriProductionApplyBtn.setText("Apply");
         agriProductionApplyBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agriProductionApplyBtnActionPerformed(evt);
@@ -572,9 +545,9 @@ public class StudentFrame extends javax.swing.JFrame {
         });
         jPanel5.add(viewCourse3);
 
+        foodbeverageApplyBtn.setText("Apply");
         foodbeverageApplyBtn.setBackground(new java.awt.Color(255, 255, 255));
         foodbeverageApplyBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        foodbeverageApplyBtn.setText("Apply");
         foodbeverageApplyBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 foodbeverageApplyBtnActionPerformed(evt);
@@ -847,6 +820,8 @@ public class StudentFrame extends javax.swing.JFrame {
 
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userProf.png"))); // NOI18N
 
+        firstNametxt.setEditable(false);
+
         jLabel33.setText("First Name");
         jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(0, 102, 153));
@@ -962,66 +937,29 @@ public class StudentFrame extends javax.swing.JFrame {
 
         trainingTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Qualifications", "Course Code", "Time In", "Attendance Status", "Time Out", "Attendance Status", "Instructor's Name"
+                "Qualifications", "Course Code", "Time In", "Time Out", "Instructor's Name"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.String.class, java.lang.Boolean.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.Boolean.class, java.lang.Boolean.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, false, true, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -1178,10 +1116,10 @@ public class StudentFrame extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(1000, 700));
         jPanel3.setLayout(new java.awt.GridLayout(3, 3, 4, 4));
 
+        category2.setText("Agriculture and Fishery Courses");
         category2.setBackground(new java.awt.Color(255, 255, 255));
         category2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         category2.setForeground(new java.awt.Color(102, 102, 102));
-        category2.setText("Agriculture and Fishery Courses");
         category2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 category2ActionPerformed(evt);
@@ -1327,14 +1265,6 @@ public class StudentFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void searchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchTextFieldActionPerformed
-
-    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchButtonActionPerformed
 
     private void notifButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notifButtonActionPerformed
         NotificationFrame notif = new NotificationFrame();
@@ -1740,8 +1670,6 @@ public class StudentFrame extends javax.swing.JFrame {
     private javax.swing.JLabel programlabel;
     private javax.swing.JButton programmingJavaApplyBtn;
     private javax.swing.JTable programsTable;
-    private javax.swing.JButton searchButton;
-    private javax.swing.JTextField searchTextField;
     private javax.swing.JButton timeInBtn;
     private javax.swing.JButton timeOutBtn;
     private javax.swing.JPanel trainingSchedpanel;
