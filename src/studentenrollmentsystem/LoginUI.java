@@ -1,7 +1,6 @@
 package studentenrollmentsystem;
 
-import msAccessConnection.UserDbAccess;
-import msAccessConnection.DatabaseConnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,13 +9,13 @@ import javax.swing.JOptionPane;
 
 public class LoginUI extends javax.swing.JFrame {
 
-    private UserDbAccess userDAO;
+    
     private int mouseX, mouseY;
     
     public LoginUI() {
         initComponents();
         setLocationRelativeTo(null);
-        userDAO = new UserDbAccess();
+        
     }
     
     
@@ -220,16 +219,9 @@ public class LoginUI extends javax.swing.JFrame {
             return;
         }
         
-        boolean authenticated = userDAO.authenticateUser(email,password);
         
-        if(authenticated){
-            JOptionPane.showMessageDialog(this, "Login Successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
-            StudentFrame sframe = new StudentFrame();
-            sframe.setVisible(true);
-            dispose();
-        }else{
-            JOptionPane.showMessageDialog(this, "Invalid Email or Password. Please Try Again", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+        
+        
     }//GEN-LAST:event_logButtonActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

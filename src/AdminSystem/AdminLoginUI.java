@@ -2,16 +2,14 @@
 package AdminSystem;
 
 import javax.swing.*;
-import msAccessConnection.AdminDbAccess;
 
 public class AdminLoginUI extends javax.swing.JFrame {
     
-    private AdminDbAccess adminDAO;
     private int mouseX, mouseY;
     public AdminLoginUI() {
         initComponents();
         setLocationRelativeTo(null);
-        adminDAO = new AdminDbAccess();
+
     }
 
     
@@ -141,16 +139,15 @@ public class AdminLoginUI extends javax.swing.JFrame {
         String username = adminUsername.getText().trim();
         String password = adminPass.getText().trim();
 
-        boolean authenticated = adminDAO.authenticateAdmin(username, password);
 
-        if (authenticated) {
-            JOptionPane.showMessageDialog(null, "Login successful!");
-             AdminUI adminUI = new AdminUI();
-            adminUI.setVisible(true);
-            dispose();
-        } else {
-            JOptionPane.showMessageDialog(null, "Login failed!");
-        }
+//        if (authenticated) {
+//            JOptionPane.showMessageDialog(null, "Login successful!");
+//             AdminUI adminUI = new AdminUI();
+//            adminUI.setVisible(true);
+//            dispose();
+//        } else {
+//            JOptionPane.showMessageDialog(null, "Login failed!");
+//        }
     }//GEN-LAST:event_adminLoginButtonActionPerformed
 
     private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
